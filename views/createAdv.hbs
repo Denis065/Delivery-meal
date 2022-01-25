@@ -1,0 +1,27 @@
+<form name="createForm" action="/api/create/{{courier.id}}" method="POST">
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Добавление продукта</label>
+    <input required name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Наименование продукта 🍔">
+    <input required name="price" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Стоимость 💰">
+    <input required name="discount" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Скидка 💸">
+    <input name="latitude" type="text" class="form-control" id="exampleFormControlInput1" placeholder="latitude">
+    <input name="longitude" type="text" class="form-control" id="exampleFormControlInput1" placeholder="longitude">
+
+
+    <select required name="categoryName" class="form-select form-select-sm" aria-label=".form-select-sm example">
+      <option disabled selected value="">Выберите категорию</option>
+      {{#each categories}}
+      <option value="{{this.id}}">{{this.title}}</option>
+      {{/each}}
+    </select>
+
+    <input type="submit" class="form-control btn-primary" value="Submit">
+  </div>
+
+</form>
+
+<div id="map"></div>
+
+<script defer src="https://api-maps.yandex.ru/2.1/?apikey=c1dc2a25-2ea2-4b3e-87a8-d091b5e6ebb7&lang=ru_RU" type="text/javascript"></script>
+<script defer src="/js/map.js"></script>

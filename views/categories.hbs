@@ -1,0 +1,20 @@
+<div id="categoryContainer">
+
+  {{#each products}}
+  <div class="card" style="width: 28rem;" >
+    <div class="card-body">
+      <h5 class="card-title text-center">{{this.title}}</h5>
+    </div>
+    <div class="text-center">
+    <ul class="list-group list-group-flush" id="list">
+      <li class="list-group-item">Price: <strike>{{this.price}} ₽</strike> <span style="color: green; font-weight:bold;">{{this.discountPrice}} ₽</span> </li>
+      <li class="list-group-item">Discount: {{this.discount}} %</li>
+      {{!-- <li class="list-group-item">{{this.imgPath}}</li> --}}
+      {{#if ../customer }}
+        <button type="PurchaseButton" class="buyBtn btn btn-info" data-id={{this.id}}>Купить</button>
+      {{/if}}
+    </ul>
+  </div>
+  {{/each}}
+</div>
+
