@@ -34,3 +34,12 @@
 
 * Список добавленных заказов
   * Возможность удалить
+
+  ### Установка
+
+  * npm install
+  * npx sequelize db:create
+  * npx sequelize db:migrate
+  * npx sequelize db:seed:all
+  * npm run dev
+
