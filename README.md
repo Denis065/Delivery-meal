@@ -1,9 +1,11 @@
 # Delivery-meal
 
 ### Главная страница
-<div align=center>
-  <img src='/img/main.png'></img>
+<div>
+  <img src='./img/main.png'>
 </div>
+
+
 * Кнопка регистрации
 * Кнопка входа
 * Список ближайших доступных непринятых заказов
